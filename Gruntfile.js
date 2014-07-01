@@ -29,7 +29,7 @@ module.exports = function (grunt) {
                 pathDelimiter: "."
             },
             default: {
-                'src': ['test/fixtures/first.json', 'test/fixtures/third.json']
+                'src': ['test/fixtures/first.json', 'test/fixtures/fourth.json']
             },
             failing: {
                 'src': ['test/fixtures/*.json']

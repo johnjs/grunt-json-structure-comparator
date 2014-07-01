@@ -1,4 +1,4 @@
-var cut = require('../tasks/lib/ObjectsStuctureComparator');
+var cut = require('../tasks/lib/ObjectsStructureComparator');
 var expect = require('chai').expect;
 
 describe('Comparator of objects structures', function () {
@@ -166,7 +166,8 @@ describe('Comparator of objects structures', function () {
         var ids = ['first', 'second', 'third'];
         var pathSeparator = "->";
         var expectedResults = {
-            'second': ['a->b', 'd->e->f']
+            'second': ['a->b', 'd->e->f', 'g->h'],
+            'third': ['g']
         };
 
         //when

@@ -1,5 +1,5 @@
 {
-    "name": "json-structre-comparator",
+    "name": "grunt-json-structure-comparator",
     "version": "0.0.1",
     "description": "Compares JSON files and returns a list of keys missing in these files",
     "repository": "https://github.com/johnjs/grunt-json-structure-comparator",

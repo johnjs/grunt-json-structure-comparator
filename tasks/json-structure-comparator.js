@@ -8,7 +8,7 @@
 
 'use strict';
 
-var jsonComparator = require("./lib/ObjectsStuctureComparator");
+var jsonComparator = require("./lib/ObjectsStructureComparator");
 
 module.exports = function (grunt) {
 
@@ -33,13 +33,18 @@ module.exports = function (grunt) {
                 };
             });
 
-            var results = jsonComparator.compareObjects(src, options.pathDelimiter);
-
-            if (Object.keys(results).length > 0) {
-                grunt.fail.fatal("Files has different structures. Please check following keys:" + JSON.stringify(results));
+            if(src.length > 0){
+                var results = jsonComparator.compareObjects(src, options.pathDelimiter);
+                if (Object.keys(results).length > 0) {
+                    grunt.fail.fatal("Files have different structures. Please check following keys:" + JSON.stringify(results));
+                } else {
+                    grunt.log.write('All files has the same structure. No keys missing. ');
+                    grunt.log.ok();
+                }
+            } else {
+                grunt.log.write('No files to compare...');
+                grunt.log.ok();
             }
         });
-
     });
-
 };
